@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-display { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 50, 'opsz' 100; }
+.font-body { font-family: 'DM Sans', system-ui, sans-serif; }
+.paper-bg {
+  background-color: #f5f1e8;
+  background-image:
+    radial-gradient(at 12% 18%, rgba(122, 138, 110, 0.08) 0, transparent 45%),
+    radial-gradient(at 88% 82%, rgba(193, 122, 90, 0.06) 0, transparent 45%);
+}
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  opacity: 0.08;
+  pointer-events: none;
+}
